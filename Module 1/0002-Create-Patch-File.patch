@@ -1,0 +1,43 @@
+From bb8342efb93b7dfce8433ee826b382f85cb85bc7 Mon Sep 17 00:00:00 2001
+From: Loveneesh Dhir <dhirloveneesh@gmail.com>
+Date: Fri, 24 Apr 2020 17:08:59 +0530
+Subject: [PATCH] Create Patch File
+
+---
+ client_test.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/client_test.py b/client_test.py
+index df5d798..b4e7bab 100644
+--- a/client_test.py
++++ b/client_test.py
+@@ -9,7 +9,7 @@ class ClientTest(unittest.TestCase):
+     ]
+     """ ------------ Add the assertion below ------------ """
+     for quote in quotes:
+-          self.assertAlmostEqual(getDataPoint(quotes), (quotes['stock'], float(quotes['top_bid']['price']), float(quotes['top_ask']['price']), (float(quotes['top_bid']['price'])+float(quotes['top_ask']['price']))/2))
++          self.assertAlmostEqual(getDataPoint(quote), (quote['stock'], float(quote['top_bid']['price']), float(quote['top_ask']['price']), (float(quote['top_bid']['price'])+float(quote['top_ask']['price']))/2))
+ 
+   def test_getDataPoint_calculatePriceBidGreaterThanAsk(self):
+     quotes = [
+@@ -18,7 +18,7 @@ class ClientTest(unittest.TestCase):
+     ]
+     """ ------------ Add the assertion below ------------ """
+     for quote in quotes:
+-          self.assertAlmostEqual(getDataPoint(quotes), (quotes['stock'], float(quotes['top_bid']['price']), float(quotes['top_ask']['price']), (float(quotes['top_bid']['price'])+float(quotes['top_ask']['price']))/2))
++          self.assertAlmostEqual(getDataPoint(quote), (quote['stock'], float(quote['top_bid']['price']), float(quote['top_ask']['price']), (float(quote['top_bid']['price'])+float(quote['top_ask']['price']))/2))
+ 
+   """ ------------ Add more unit tests ------------ """
+   def test_getDataPoint_calculatePriceBidEqualtoNegativeAsk(self):
+@@ -28,7 +28,7 @@ class ClientTest(unittest.TestCase):
+     ]
+     """ ------------ Add the assertion below ------------ """
+     for quote in quotes:
+-          self.assertAlmostEqual(getDataPoint(quotes), (quotes['stock'], float(quotes['top_bid']['price']), float(quotes['top_ask']['price']), (float(quotes['top_bid']['price'])+float(quotes['top_ask']['price']))/2))
++          self.assertAlmostEqual(getDataPoint(quote), (quote['stock'], float(quote['top_bid']['price']), float(quote['top_ask']['price']), (float(quote['top_bid']['price'])+float(quote['top_ask']['price']))/2))
+ 
+ 
+ 
+-- 
+2.25.1.windows.1
+
